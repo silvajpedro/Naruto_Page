@@ -1,0 +1,33 @@
+@import "utils.scss";
+
+.Footer{
+    @include default_flex(space-around, center);
+    background-color: $default-color;
+    height: 11.5vh;
+    padding-top: 1vh;
+    nav{
+        @include default_flex(center, center);
+        width: 15vw;
+        display: flex;
+    }
+    p{
+        font-weight: 900;
+        font-size: 2.4em;
+        @include default_flex("center",center);
+        width: 60vw;
+    }
+    span{
+        font-weight: 100;
+        margin-bottom: 3px;
+        margin-left: 1.5vw;
+    }
+}
+
+.Icons{
+    width: 5.5vw;
+    height: 7vh;
+    &:hover{
+        opacity: 0.5;
+        cursor: $hover-cursor;
+    }
+}

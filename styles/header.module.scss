@@ -1,0 +1,42 @@
+@import "./utils.scss";
+
+.Header {
+    display: flex;
+    align-items: center;
+    background-image: url("../public/naruto_back.png");
+    height: 82vh;
+    background-size: 100%;
+    background-position: center top;
+  }
+  .SessaoHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    // border: solid;
+    width: 40vw;
+    height: 28vh;
+    margin-left: 7vw;
+    margin-bottom: 12vh;
+    letter-spacing: 3px;
+    h1,
+    ul {
+      font-weight: 900;
+    }
+    h1 {
+      font-size: 4em;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      // border: solid;
+      width: 36vw;
+      margin-left: 2.25vw;
+      font-size: 2.35em;
+    }
+    a:hover {
+      opacity: 0.5;
+      cursor: $hover-cursor;
+    }
+  }
+  
