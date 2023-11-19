@@ -1,9 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    color: #000;
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  scroll-behavior: smooth;
+}
+h2 {
+  font-size: 3.25vw;
+  margin-left: 4vw;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 3px;
 }

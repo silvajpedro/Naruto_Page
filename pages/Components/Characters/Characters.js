@@ -1,8 +1,10 @@
-import Header from "../Header/header";
-import Footer from "../Footer/Footer";
+import Header from "@/pages/Components/Header/header";
+import Footer from "@/pages/Components/Footer/Footer";
+import styles from "@/styles/characters.module.scss"
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Sem_foto from "@/public/sem_foto.gif"
 
 export default function Characters() {
     const [post, setPosts] = useState([]);
@@ -14,17 +16,22 @@ export default function Characters() {
 
     const getPosts = async () => {
         const response = await axios.get(
-            `https://www.narutodb.xyz/api/character?page=${nextPage}&limit=30`
+            `https://www.narutodb.xyz/api/character?page=${nextPage}&limit=15`
         );
         setPosts(response.data.characters);
     };
 
     const Personagens = (item, index) => {
-        if (item.images.length === 0) {
-            return null;
-        }
 
-        const imageUrl = item.images[0] ? item.images[0] : item.images[1];
+        let imageUrl = item.images[0] ? item.images[0] : item.images[1];
+        
+        if(item.images[0]){
+            imageUrl = item.images[0]
+        } else if(item.images[1]){
+            imageUrl = item.images[1]
+        } else {
+            imageUrl = Sem_foto
+        }
 
         let nacionalidade = "";
 
@@ -57,11 +64,12 @@ export default function Characters() {
         window.scrollTo(750, 750)
 
         return (
-            <figure key={index}>
-                <img src={imageUrl} alt={item.name} />
-                <figcaption>{item.name}</figcaption>
-                <figcaption>{nacionalidade}</figcaption>
-            </figure>
+            <div className={styles.Character}>
+                <figure style={{ backgroundImage: `url(${imageUrl})` }} key={index}>
+                    <figcaption>{item.name}</figcaption>
+                    <figcaption>{nacionalidade}</figcaption>
+                </figure>
+            </div>
         );
     };
 
@@ -74,12 +82,20 @@ export default function Characters() {
                 <link rel="icon" href="/Naruto.ico" />
             </Head>
             <Header />
-            {post.map((item, index) => Personagens(item, index))}
+            <main className={styles.CharactersMain}>
+                <h2>CHARACTERS</h2>
 
-            <button onClick={() => { setNextPage((prevPage) => prevPage + 1)}}>
-                Próxima página
-            </button>
+                <section className={styles.CharactersBox}>
+                    {post.map((item, index) => Personagens(item, index))}
+                </section>
 
+                <div className={styles.ButtonBox}>
+                    <button onClick={() => setNextPage((prevPage) => prevPage + 1)}>
+                        Página {nextPage + 1} <span>»</span>
+                    </button>
+                </div>
+
+            </main>
             <Footer />
         </>
     );

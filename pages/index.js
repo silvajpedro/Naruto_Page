@@ -23,7 +23,6 @@ export default function Home() {
 
   const [narutoImage,setNarutoImage] = useState(Hokage_gif)
 
-
   const ChangeImage = () =>{
       setNarutoImage(narutoImage === Hokage_gif ? Hokage_back: Hokage_gif)
   }

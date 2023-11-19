@@ -14,7 +14,7 @@ export default function Abilties() {
                 <link rel="icon" href="/Naruto.ico" />
             </Head>
             <Header />
-            <h1>Aqui é Habilidades</h1>
+            <h2>ABILITIES</h2>
             <Footer />
         </>
     )

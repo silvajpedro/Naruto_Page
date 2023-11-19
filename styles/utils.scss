@@ -6,3 +6,7 @@ $hover-cursor:url("data:image/x-icon;base64,AAACAAEAICAAAAIAAgCoEAAAFgAAACgAAAAg
   justify-content: $justify;
   align-items: $align;
 }
+@mixin default_hover{
+  cursor: $hover-cursor;
+  opacity: 0.5;
+}

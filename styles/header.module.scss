@@ -24,7 +24,7 @@
       font-weight: 900;
     }
     h1 {
-      font-size: 4em;
+      font-size: 3.5vw;
     }
     ul {
       display: flex;
@@ -32,11 +32,10 @@
       // border: solid;
       width: 36vw;
       margin-left: 2.25vw;
-      font-size: 2.35em;
+      font-size: 2vw;
     }
-    a:hover {
-      opacity: 0.5;
-      cursor: $hover-cursor;
+    a:hover,li:hover {
+      @include default_hover;
     }
   }
   

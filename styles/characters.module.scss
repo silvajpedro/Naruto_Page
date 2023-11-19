@@ -1,0 +1,57 @@
+@import "./utils.scss";
+
+.CharactersMain {
+  @include default_flex(space-evenly, flex-start);
+  flex-direction: column;
+  height: 135vh;
+  h2{
+    margin-top: 3vh;
+  }
+}
+
+.Character {
+  background-color: $default-color;
+  border-radius: 20px;
+  margin: 20px;
+  border: solid 4px;
+  figure {
+    margin: 16px;
+    width: 15vw;
+    height: 26vh;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.CharactersBox {
+  @include default_flex(space-between, center);
+  flex-wrap: wrap;
+  height: 110vh;
+}
+
+.ButtonBox{
+    @include default_flex(center,center);
+    height: 12vh;
+    width: 100%;
+    padding-right: 1.5vw;
+    button{
+        @include default_flex(center,center);
+        width: 11.5vw;
+        height: 5.8vh;
+        border-radius: 30px;
+        border: solid 3px;
+        font-size: 1.20vw;
+        background-color: $default-color;
+        padding-left: 12px;
+        &:hover{
+           @include default_hover;
+        }
+    }
+    span{
+        font-size: 3.25vw;
+        margin-bottom: 12px;
+        margin-left: 8px;
+    }
+}

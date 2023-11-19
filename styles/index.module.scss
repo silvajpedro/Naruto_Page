@@ -1,38 +1,35 @@
 @import "./utils.scss";
 
-.MainBox{
-    @include default_flex(space-evenly,flex-start);
-    flex-direction: column;
-    height: 82vh;
-    margin-bottom:5vh;
-    h2{
-        font-size: 3.60em;
-        margin-left: 4vw;
-    }
-    section{
-        @include default_flex(space-evenly,center);
-        width: 100%;
-    }
-    p{
-        font-size: 2.34em;
-        width: 58vw;
-        text-align: justify;
-    }
+.MainBox {
+  @include default_flex(space-evenly, flex-start);
+  flex-direction: column;
+  height: 82vh;
+  margin-bottom: 5vh;
+  
+  section {
+    @include default_flex(space-evenly, center);
+    width: 100%;
+  }
+  p {
+    font-size: 2.15vw;
+    width: 58vw;
+    text-align: justify;
+  }
 }
 
-.HokageBox{
-    display: flex;
-    width:  23vw;
-    height: 26vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    border-radius: 20px;
-    box-shadow: #F07F54 0px 2px 5px, #F07F54 0px 7px 13px -3px, #F07F54 0px -3px 0px inset;
-    transition: ease-in-out 1s;
-    &:hover{
-        cursor: $hover-cursor;
-        transform: rotateY(180deg);
-
-    }
+.HokageBox {
+  display: flex;
+  width: 23vw;
+  height: 26vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 20px;
+  box-shadow: #f07f54 0px 2px 5px, #f07f54 0px 7px 13px -3px,
+    #f07f54 0px -3px 0px inset;
+  transition: ease-in-out 1s;
+  &:hover {
+    cursor: $hover-cursor;
+    transform: rotateY(180deg);
+  }
 }
