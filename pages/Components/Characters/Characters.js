@@ -12,6 +12,9 @@ export default function Characters() {
 
     useEffect(() => {
         getPosts();
+        const Subtitulo = document.querySelector("h2")
+        const SubtituloPosicao = Subtitulo.offsetTop
+        window.scrollTo(0, SubtituloPosicao - 20)
     }, [nextPage]);
 
     const getPosts = async () => {
@@ -23,14 +26,16 @@ export default function Characters() {
 
     const Personagens = (item, index) => {
 
+   
+
         let imageUrl = item.images[0] ? item.images[0] : item.images[1];
         
         if(item.images[0]){
             imageUrl = item.images[0]
         } else if(item.images[1]){
             imageUrl = item.images[1]
-        } else {
-            imageUrl = Sem_foto
+        } else if(item.images.length === 0)  {
+            imageUrl = Sem_foto.src
         }
 
         let nacionalidade = "";
@@ -61,8 +66,8 @@ export default function Characters() {
             nacionalidade = "Monte Myōboku";
         }
         // criar um objeto com nome de todos os países e vilas e trazer pra cá comparando o valor vindo da API com valor do objeto
-        window.scrollTo(750, 750)
-
+       
+        
         return (
             <div className={styles.Character}>
                 <figure style={{ backgroundImage: `url(${imageUrl})` }} key={index}>
@@ -72,7 +77,7 @@ export default function Characters() {
             </div>
         );
     };
-
+    
     return (
         <>
             <Head>
@@ -83,7 +88,7 @@ export default function Characters() {
             </Head>
             <Header />
             <main className={styles.CharactersMain}>
-                <h2>CHARACTERS</h2>
+                <h2 onLoad={()=>{alert("testando")}}>CHARACTERS</h2>
 
                 <section className={styles.CharactersBox}>
                     {post.map((item, index) => Personagens(item, index))}
