@@ -28,8 +28,6 @@
   @include default_flex(space-evenly, center);
   flex-flow: row wrap;
   padding: 30px;
-  width: 100%;
-  border: solid green;
 }
 
 .ButtonBox{
