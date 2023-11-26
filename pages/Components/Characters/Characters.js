@@ -24,9 +24,7 @@ export default function Characters() {
         setPosts(response.data.characters);
     };
 
-    const Personagens = (item, index) => {
-
-   
+    const Personagens = (item, index, id) => {
 
         let imageUrl = item.images[0] ? item.images[0] : item.images[1];
         
@@ -69,7 +67,7 @@ export default function Characters() {
        
         
         return (
-            <div className={styles.Character}>
+            <div key={index} className={styles.Character}>
                 <figure style={{ backgroundImage: `url(${imageUrl})` }} key={index}>
                     <figcaption>{item.name}</figcaption>
                     <figcaption>{nacionalidade}</figcaption>

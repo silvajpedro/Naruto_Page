@@ -1,0 +1,67 @@
+@use "./characters.module.scss";
+@import "./utils.scss";
+
+.VillageBox{
+
+  h2{
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+}
+
+.VillagesCharacterBox{
+  @extend .CharactersBox;
+}
+.VillageCharacters{
+  @extend .Character;
+}
+
+.Navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  ul {
+    border-radius: 30px;
+    border: solid 4px;
+    width: 74vw;
+    padding: 35px;
+    background-color: $default_color;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    width: 14vw;
+    font-size: 1.20vw;
+    margin-top:8px;
+    margin-bottom: 8px;
+  }
+  
+  li:hover {
+    opacity: 0.5;
+    background-color: white;
+    cursor: $hover-cursor;
+  }
+  img{
+    margin-left: 12px;
+    width: 2vw;
+  }
+}
+
+.VillageInfo{
+  @extend .Character;
+  div{
+    border: solid;
+    height: 10vh;
+    width: 10vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: red;
+  }
+}

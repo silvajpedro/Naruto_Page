@@ -23,10 +23,10 @@ export default function Header() {
                                 <Link href={"/"}>HOME</Link>
                             </li>
                             <li>
-                                <Link  href={"/Components/Abilities/Abilities"}>ABILITIES</Link>
+                                <Link  href={"/Components/Characters/Characters"}>CHARACTERS</Link>
                             </li>
                             <li>
-                                <Link  href={"/Components/Characters/Characters"}>CHARACTERS</Link>
+                                <Link  href={"/Components/Villages/Villages"}>VILLAGES</Link>
                             </li>
                         </ul>
                     </nav>
