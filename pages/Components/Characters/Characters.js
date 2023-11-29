@@ -97,7 +97,7 @@ export default function Characters() {
                         Página {nextPage + 1} <span>»</span>
                     </button>
                 </div>
-
+a
             </main>
             <Footer />
         </>
