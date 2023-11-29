@@ -1,4 +1,4 @@
-import Header from "@/pages/Components/Header/header";
+import Header from "../Header/header";
 import Footer from "@/pages/Components/Footer/Footer";
 import styles from "@/styles/characters.module.scss"
 import Head from "next/head";
