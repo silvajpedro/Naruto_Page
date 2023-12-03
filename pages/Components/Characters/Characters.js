@@ -19,7 +19,7 @@ export default function Characters() {
 
     const getPosts = async () => {
         const response = await axios.get(
-            `https://www.narutodb.xyz/api/character?page=${nextPage}&limit=16`
+            ` https://narutodb.xyz/api/character?page=${nextPage}&limit=16`
         );
         setPosts(response.data.characters);
     };

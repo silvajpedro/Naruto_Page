@@ -13,7 +13,7 @@ import estrela2 from "@/public/estrela2.png";
 import estrela3 from "@/public/estrela3.png";
 import estrela4 from "@/public/estrela4.png";
 import casa from "@/public/casa.png";
-import villages from "./villages.json"
+import villages from "./villages.json";
 
 // ESTILO SASS
 import styles from "@/styles/villages.module.scss";
@@ -23,14 +23,13 @@ export default function Clans() {
     const [villageNames, setVillageNames] = useState([]);
 
     // CONSUMO API
-
     const [chooseVillage, setChooseVillage] = useState("Konohagakure")
-
+    
     const getVillage = async () => {
-        const info = await axios.get(`https://www.narutodb.xyz/api/village/search?name=${chooseVillage}`)
+        const info = await axios.get(`https://narutodb.xyz/api/village/search?name=${chooseVillage}`)
         setVillageNames(info.data.characters)
     }
-
+    
     useEffect(() => {
         getVillage()
     }, [chooseVillage])
@@ -60,6 +59,7 @@ export default function Clans() {
         } else if (item.images.length === 0) {
             imageUrl = Sem_foto.src
         }
+        
         return (
             <div className={styles.VillageCharacters}>
                 <figure className={styles.Characters} style={{ backgroundImage: `url(${imageUrl})` }}>
@@ -68,7 +68,7 @@ export default function Clans() {
             </div>
         )
     }
-
+// Função que compara o useState e renderiza a comparação com o map() do arquivo json
     const VillageInfo = () => {
 
         return (
@@ -76,7 +76,7 @@ export default function Clans() {
                 {villages.map((item) => (
                     item.nome_vila === chooseVillage ?
                         <>
-                            <div style={{backgroundImage:`url(${item.imagem_vila})`}}>teste</div>
+                            <div style={{backgroundImage:`url(${item.imagem_vila})`}}></div>
                             <p>{item.historia_vila}</p>
                         </> : null
 
