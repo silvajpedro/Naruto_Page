@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer";
 import Head from "next/head";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Sem_foto from "@/public/sem_foto.gif";
+import Sem_foto from "@/public/sem_foto.jpg";
 
 // ÍCONES VILAS
 import pergaminho from "@/public/pergaminho.png";
@@ -18,8 +18,21 @@ import villages from "./villages.json";
 // ESTILO SASS
 import styles from "@/styles/villages.module.scss";
 
-export default function Clans() {
+import { Hubballi, Anton } from "next/font/google"
 
+const HubballiFont = Hubballi({
+    subsets: ['latin'],
+    weight: ['400']
+
+})
+const AntonFont = Anton({
+  subsets: ['latin'],
+  weight: ['400']
+
+})
+
+export default function Clans() {
+    const [IsVisible, setIsVisible] = useState(false)
     const [villageNames, setVillageNames] = useState([]);
 
     // CONSUMO API
@@ -30,9 +43,25 @@ export default function Clans() {
         setVillageNames(info.data.characters)
     }
     
+    const toggleVisibility = () => {
+        if (window.scrollY > 2500) { // Assumindo que 100 é a altura desejada
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      };
+    
+    
+    
     useEffect(() => {
+        
         getVillage()
+
+        window.addEventListener('scroll',toggleVisibility)
+
     }, [chooseVillage])
+
+
     // FIM CONSUMO API
 
     // FUNCIONALIDADE ÍCONES VILAS
@@ -62,9 +91,10 @@ export default function Clans() {
         
         return (
             <div className={styles.VillageCharacters}>
-                <figure className={styles.Characters} style={{ backgroundImage: `url(${imageUrl})` }}>
-                    <figcaption>{item.name}</figcaption>
-                </figure>
+
+                <h3 className={AntonFont.className}>{item.name}</h3>
+
+                <figure style={{ backgroundImage: `url(${imageUrl})` }}></figure>
             </div>
         )
     }
@@ -77,7 +107,9 @@ export default function Clans() {
                     item.nome_vila === chooseVillage ?
                         <>
                             <div style={{backgroundImage:`url(${item.imagem_vila})`}}></div>
-                            <p>{item.historia_vila}</p>
+
+                            <p className={HubballiFont.className}>{item.historia_vila}</p>
+                      
                         </> : null
 
                 ))}
@@ -102,11 +134,11 @@ export default function Clans() {
 
                 <nav className={styles.Navigation}>
                     <ul>
-                        {villages.map((item, index) => <li onClick={() => setChooseVillage(item.nome_vila)} key={index}>{item.nome_vila} <img src={IconVillages()} alt="" /> </li>)}
+                        {villages.map((item, index) => <li onClick={() => setChooseVillage(item.nome_vila)} key={index}>{item.nome_vila} <img src={IconVillages()} alt="icon village" /> </li>)}
                     </ul>
                 </nav>
 
-                <section>
+                <section className={styles.VillageSection}> 
 
                     <figure className={styles.VillageInfo}>
                         {VillageInfo()}
@@ -121,6 +153,8 @@ export default function Clans() {
 
             </section>
 
+            { IsVisible && <button onClick={()=>{scrollTo(0,700)}} className={styles.upButton}>⇧</button>}
+            
             <Footer />
         </>
     )

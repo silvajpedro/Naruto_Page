@@ -4,7 +4,7 @@ import styles from "@/styles/characters.module.scss"
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Sem_foto from "@/public/sem_foto.gif"
+import Sem_foto from "@/public/sem_foto.jpg"
 
 export default function Characters() {
     const [post, setPosts] = useState([]);

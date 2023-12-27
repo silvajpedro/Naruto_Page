@@ -10,12 +10,24 @@
 
 }
 
+.VillageSection{
+  @include default_flex(center,center);
+}
 .VillagesCharacterBox{
   @extend .CharactersBox;
 }
 .VillageCharacters{
   @extend .Character;
+  @include default_flex(center,center);
+  flex-direction: column;
+  h3{
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-size: 2vw;
+    letter-spacing: 0.5px;
+  }
 }
+
 
 .Navigation {
   display: flex;
@@ -55,13 +67,36 @@
 
 .VillageInfo{
   @extend .Character;
+  @include default_flex(space-around,center);
+  width: 88vw;
+  height: 46vh;
   div{
-    border: solid;
-    height: 10vh;
-    width: 10vw;
+    height: 39vh;
+    width: 33vw;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: red;
+    border-radius: 30px;
+  }
+  p{
+    width: 46vw;
+    font-size: 1.5vw;
+    line-height: 3.8vh;
+    font-weight: 500;
+  }
+}
+.upButton{
+  position: fixed;
+  bottom: 5vh;
+  right: 2.5vw;
+  width: 4.5vw;
+  height: 8vh;
+  border-radius: 100%;
+  font-size: 2vw;
+  background-color: $default-color;
+  border: solid;
+  cursor: $hover-cursor;
+  &:hover{
+    opacity: 0.5;
   }
 }

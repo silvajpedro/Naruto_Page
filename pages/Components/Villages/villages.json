@@ -17,12 +17,12 @@
   {
     "nome_vila": "Daidai Village",
     "historia_vila": "Daidai Village is a small village located in an unknown country in the Naruto world. Little is known about the Daidai village. The origins and history of the Daidai Village are a mystery to all. The only known fact about this village is that it is the residence of the Yoimura clan. Other than this small detail, nothing is known about Daidai Village.",
-    "imagem_vila":"/villages/indisponivel.png"
+    "imagem_vila":"/sem_foto.jpg"
   },
   {
     "nome_vila": "Genjutsu Tree Village",
     "historia_vila": "This unnamed village is hidden among special trees that produce a genjutsu-like effect, thus protecting the village from invaders. Naruto and Jiraiya came to the village to hone Naruto's genjutsu-repelling abilities. Villagers use Chilli Pepper Bombs to counter the genjutsu-like effects. There, they encountered Kandachi and his helpers. With the help of Tanishi, Naruto and Jiraiya managed to defeat their foe.",
-    "imagem_vila":"/villages/indisponivel.png"
+    "imagem_vila":"/sem_foto.jpg"
   },
   {
     "nome_vila": "Hachō Village",
@@ -116,7 +116,7 @@
   },
   {
     "nome_vila": "Takumi Village",
-    "historia_vila": "Takumi Village (匠の里, Takumi no Sato, literally meaning: Village of Artisans) is an anime-only village that resides in the Land of Rivers. It was founded approximately one hundred years ago by a man named Seimei. Takumi is known for its skills in making weaponry, many of which are sold to the ninja villages of the world. However, each time relations worsened between the larger villages, Takumi was attacked by one village over fear of their ninja tools crossing to the other village. Yet they still had to curry favor with the larger villages to survive. Over time, their clientele from the other villages grew in skill, making the crafted weapons obsolete. When the village faced hard times, they requested help but were ignored. Certain skilled Takumi villagers grew resentful and felt the villages didn't respect them for all the help their weapons provided in the past, having repaid their aid with attacks in the past.",
+    "historia_vila": "Takumi Village (匠の里, Takumi no Sato, literally meaning: Village of Artisans) is an anime-only village that resides in the Land of Rivers. It was founded approximately one hundred years ago by a man named Seimei. Takumi is known for its skills in making weaponry, many of which are sold to the ninja villages of the world. However, each time relations worsened between the larger villages. Yet they still had to curry favor with the larger villages to survive. Over time, their clientele from the other villages grew in skill, making the crafted weapons obsolete. Certain skilled Takumi villagers grew resentful and felt the villages didn't respect them for all the help their weapons provided in the past, having repaid their aid with attacks in the past.",
     "imagem_vila":"/villages/Takumi_Village.png"
   },
   {
