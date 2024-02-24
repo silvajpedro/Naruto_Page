@@ -20,12 +20,6 @@
   @extend .Character;
   @include default_flex(center,center);
   flex-direction: column;
-  h3{
-    margin: 10px 0 0 0;
-    text-align: center;
-    font-size: 2vw;
-    letter-spacing: 0.5px;
-  }
 }
 
 
@@ -36,7 +30,7 @@
   ul {
     border-radius: 30px;
     border: solid 4px;
-    width: 74vw;
+    width: 76vw;
     padding: 35px;
     background-color: $default_color;
     display: flex;
@@ -48,8 +42,8 @@
     align-items: center;
     justify-content: center;
     height: 6vh;
-    width: 14vw;
-    font-size: 1.20vw;
+    width: 17vw;
+    font-size: 1.6vw;
     margin-top:8px;
     margin-bottom: 8px;
   }

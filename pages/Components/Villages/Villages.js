@@ -134,7 +134,7 @@ export default function Clans() {
 
                 <nav className={styles.Navigation}>
                     <ul>
-                        {villages.map((item, index) => <li onClick={() => setChooseVillage(item.nome_vila)} key={index}>{item.nome_vila} <img src={IconVillages()} alt="icon village" /> </li>)}
+                        {villages.map((item, index) => <li className={HubballiFont.className} onClick={() => setChooseVillage(item.nome_vila)} key={index}>{item.nome_vila} <img src={IconVillages()} alt="icon village" /> </li>)}
                     </ul>
                 </nav>
 

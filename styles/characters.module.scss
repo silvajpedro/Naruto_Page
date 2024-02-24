@@ -10,9 +10,11 @@
 
 .Character {
   background-color: $default-color;
+  @include default_flex(center,center);
+  flex-direction: column;
   border-radius: 20px;
   margin: 26px;
-  border: solid 4px;
+  border: solid   4px;
   figure {
     margin: 16px;
     width: 16vw;
@@ -43,7 +45,8 @@
         border: solid 3px;
         font-size: 1.20vw;
         background-color: $default-color;
-        padding-left: 12px;
+        margin: 0px 12px 0px 12px;
+        gap:10px;
         &:hover{
            @include default_hover;
         }

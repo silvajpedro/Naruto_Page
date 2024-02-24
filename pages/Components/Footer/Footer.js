@@ -20,7 +20,7 @@ export default function Footer() {
                 <Image src={spotify} quality={100}  className={styles.Icons} alt="" />
                 <Image src={github} quality={100}  className={styles.Icons} alt="" />
             </nav>
-            <p className={HubballiFont.className}>Copyright<span> João Pedro / Vai na Web, English Class</span></p>
+            <p className={HubballiFont.className}>Copyright<span> João Pedro Belo / Vai na Web</span></p>
         </footer>
     )
 }
