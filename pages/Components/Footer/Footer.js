@@ -15,12 +15,7 @@ const HubballiFont = Hubballi({
 export default function Footer() {
     return (
         <footer className={styles.Footer}>
-            <nav>
-                <Image src={instagram} quality={100} className={styles.Icons} alt="" />
-                <Image src={spotify} quality={100}  className={styles.Icons} alt="" />
-                <Image src={github} quality={100}  className={styles.Icons} alt="" />
-            </nav>
-            <p className={HubballiFont.className}>Copyright<span> Junior Giroux / Vai na Web</span></p>
+        
         </footer>
     )
 }
