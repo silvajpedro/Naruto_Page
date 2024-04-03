@@ -15,7 +15,7 @@ export default function Header() {
 
                 <section className={styles.SessaoHeader}>
 
-                    <h1 className={AntonFont.className}>NARUTO UZUMAKI</h1>
+                    <h1 className={AntonFont.className}>ISAAC KAPELA</h1>
 
                     <nav>
                         <ul className={AntonFont.className}>
