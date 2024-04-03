@@ -62,6 +62,7 @@
 .VillageInfo{
   @extend .Character;
   @include default_flex(space-around,center);
+  flex-direction: row;
   width: 88vw;
   height: 46vh;
   div{
