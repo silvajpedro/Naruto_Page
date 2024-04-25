@@ -1,5 +1,5 @@
-import { Anton } from "next/font/google";
 import styles from '@/styles/header.module.scss';
+import { Anton } from "next/font/google";
 import Link from "next/link";
 
 const AntonFont = Anton({
@@ -20,7 +20,7 @@ export default function Header() {
                     <nav>
                         <ul className={AntonFont.className}>
                             <li>
-                                <Link href={"/"}>HOME</Link>
+                                <Link href={"/"}>CASA</Link>
                             </li>
                             <li>
                                 <Link  href={"/Components/Characters/Characters"}>CHARACTERS</Link>
